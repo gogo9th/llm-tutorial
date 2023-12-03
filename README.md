@@ -80,7 +80,7 @@ $ python3 llama2-hf-inference.py   # replace the Hugging Face token by yours at 
 ### Running Orca2 with Hugging Face (Google Colab or Local Setup)
 - Model URL: [https://huggingface.co/microsoft/Orca-2-13b](https://huggingface.co/microsoft/Orca-2-13b)
 - Tutorial: [https://m0nads.wordpress.com/2023/11/27/orca-2-on-colab/](https://m0nads.wordpress.com/2023/11/27/orca-2-on-colab/)
-- Minimum GPU RAM Size: 150GB ~ 180GB
+- Minimum GPU RAM Size: 15GB
 - If you want local execution:
 ```
 $ python3 orca2-hf-inference.py   # replace the Hugging Face token by yours at [https://huggingface.co/settings/tokens](https://huggingface.co/settings/tokens)

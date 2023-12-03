@@ -45,29 +45,30 @@ $ python3
 
 **Step 5.** Run the LLaMA example chatbot.
 ```
-### 7B Chat Model
+### 7B Chat Model (1 GPU needed)
 $ python3 -m torch.distributed.run --nproc_per_node 1 example_chat_completion.py     --ckpt_dir llama-2-7b-chat/     --tokenizer_path tokenizer.model     --max_seq_len 512 --max_batch_size 6
 
-### 13B Chat Model
+### 13B Chat Model (2 GPUs needed)
 $ python3 -m torch.distributed.run --nproc_per_node 2 example_chat_completion.py     --ckpt_dir llama-2-7b-chat/     --tokenizer_path tokenizer.model     --max_seq_len 512 --max_batch_size 6
 
-### 70B Chat Model
+### 70B Chat Model (8 GPUs needed)
 $ python3 -m torch.distributed.run --nproc_per_node 8 example_chat_completion.py     --ckpt_dir llama-2-7b-chat/     --tokenizer_path tokenizer.model     --max_seq_len 512 --max_batch_size 6
 
-### 7B Text Completion Model
+### 7B Text Completion Model (1 GPU needed)
 $ python3 -m torch.distributed.run --nproc_per_node 1 example_text_completion.py --ckpt_dir llama-2-7b/ --tokenizer_path tokenizer.model --max_seq_len 128 --max_batch_size 4
 
-### 13B Text Completion Model
+### 13B Text Completion Model (2 GPUs needed)
 $ python3 -m torch.distributed.run --nproc_per_node 2 example_text_completion.py --ckpt_dir llama-2-13b/ --tokenizer_path tokenizer.model --max_seq_len 128 --max_batch_size 4
 
-### 70B Text Completion Model
+### 70B Text Completion Model (4 GPUs needed)
 $ python3 -m torch.distributed.run --nproc_per_node 8 example_text_completion.py --ckpt_dir llama-2-70b/ --tokenizer_path tokenizer.model --max_seq_len 128 --max_batch_size 4
 ```
 
 
-### Running LLaMA2 with Hugging Face (Google Colab or Local)
+### Running LLaMA2 with Hugging Face (Google Colab or Local Setup)
 - Model URL: [https://huggingface.co/meta-llama/Llama-2-7b-chat-hf](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf)
 - Tutorial: [https://colab.research.google.com/drive/1SQmK0GYz34RGVlOnL5YMkdm7hXD6OjQT?usp=sharing](https://colab.research.google.com/drive/1SQmK0GYz34RGVlOnL5YMkdm7hXD6OjQT?usp=sharing)
+- Minimum GPU RAM Size: 150GB ~ 180GB
 - Run `Chatbot_LLaMa_2.ipynb` on Google Colab. Ensure to set up Runtime --> Change the runtime type --> some GPU.
 - If you want local execution:
 ```
@@ -76,9 +77,10 @@ $ python3 llama2-hf-inference.py   # replace the Hugging Face token by yours at 
 
 
 
-### Running Orca2 with Hugging Face (15GB GPU RAM Required)
+### Running Orca2 with Hugging Face (Google Colab or Local Setup)
 - Model URL: [https://huggingface.co/microsoft/Orca-2-13b](https://huggingface.co/microsoft/Orca-2-13b)
 - Tutorial: [https://m0nads.wordpress.com/2023/11/27/orca-2-on-colab/](https://m0nads.wordpress.com/2023/11/27/orca-2-on-colab/)
+- Minimum GPU RAM Size: 150GB ~ 180GB
 - If you want local execution:
 ```
 $ python3 orca2-hf-inference.py   # replace the Hugging Face token by yours at [https://huggingface.co/settings/tokens](https://huggingface.co/settings/tokens)

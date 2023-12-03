@@ -3,6 +3,7 @@ import transformers
 import torch
 from huggingface_hub import login
 
+# Here, put your own Hugging Face token copied from https://huggingface.co/settings/tokens
 my_token = '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'
 login(token=my_token)
 

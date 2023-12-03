@@ -84,7 +84,7 @@ $ python3 llama2-hf-inference.py   # replace the Hugging Face token by yours at 
 - If you want local execution:
 ```
 $ python3 orca2-hf-inference.py   # replace the Hugging Face token by yours at [https://huggingface.co/settings/tokens](https://huggingface.co/settings/tokens)
-
+```
 
 ### Resources
 - [Hugging Face Library's Quantization](https://huggingface.co/docs/transformers/main_classes/quantization) for smaller model sizes
